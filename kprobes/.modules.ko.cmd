@@ -1,1 +1,0 @@
-cmd_/disk/xjf/afl-sys/kprobes/modules.ko := ld -r -m elf_x86_64 -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /disk/xjf/afl-sys/kprobes/modules.ko /disk/xjf/afl-sys/kprobes/modules.o /disk/xjf/afl-sys/kprobes/modules.mod.o ;  true
