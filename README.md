@@ -1,7 +1,9 @@
 # AFL-SYS
 
 ## Installation
-* AFL-SYS depends on a kernel module named NoDrop. Enter NoDrop/build and use cmake to install:
+* AFL-SYS depends on a kernel module named NoDrop. 
+First, run NoDrop/scripts/getmusl.sh to get musl.
+Then enter NoDrop/build and use cmake to install:
 ```
 cmake ..
 make load
