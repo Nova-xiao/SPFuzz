@@ -14,5 +14,4 @@ httpd_/
 httpd-*/
 http-test-files/
 musl/
-*.txt
 !CMakeLists.txt
