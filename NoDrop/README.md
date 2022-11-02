@@ -6,6 +6,8 @@ NoDrop contains 2 major components: the kernel module and the monitor. All codes
 
 NoDrop is tested on Ubuntu 18.04 with unmodified Linux kernel 4.15.0-171. 
 
+You need to run NoDrop/scripts/getmusl.sh first to get musl.
+
 Before building NoDrop, make sure that `gcc` has been installed on your machine. To build kernel module and monitor, just run (privilege is not required)
 
 ```shell
