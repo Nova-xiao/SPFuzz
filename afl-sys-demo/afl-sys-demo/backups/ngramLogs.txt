@@ -1,0 +1,200 @@
+137 19:47:25.423573998 1 sysdig (4343) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=764674050 
+138 19:47:25.424975329 3 <NA> (0) > switch next=30065033220 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+139 19:47:25.424978069 3 <NA> (7) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+140 19:47:25.424989941 3 <NA> (0) > switch next=1614907965444 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+141 19:47:25.424992383 1 <NA> (0) > switch next=3762391613444 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+142 19:47:25.424993728 3 systemd-journal (376) < epoll_wait res=4295491584 
+143 19:47:25.424998244 3 systemd-journal (376) > exit 
+144 19:47:25.424999135 3 systemd-journal (376) < <unknown> 
+145 19:47:25.424999955 1 in:imklog (876) < read res=1683632422920 data= 
+146 19:47:25.425004627 3 systemd-journal (376) > read fd=38654967816 size=589828 
+147 19:47:25.425009135 3 systemd-journal (376) < read res=442386874376 data= 
+148 19:47:25.425022404 1 in:imklog (876) > futex addr=183BC8C00080002 op=0(FUTEX_WAIT) val=6505139200 
+149 19:47:25.425031198 1 in:imklog (876) < futex res=4295491584 
+150 19:47:25.425035688 1 in:imklog (876) > read fd=17180131336 size=262148 
+151 19:47:25.425040031 1 in:imklog (876) > switch next=55834836996 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=226754563 
+152 19:47:25.425040974 2 <NA> (0) > switch next=3766686580740 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+153 19:47:25.425043799 2 rs:main (877) < futex res=524288 
+154 19:47:25.425048386 2 rs:main (877) > futex addr=1841B3000080002 op=0(FUTEX_WAIT) val=6511341568 
+155 19:47:25.425049363 2 rs:main (877) < futex res=524288 
+156 19:47:25.425058381 3 systemd-journal (376) > epoll_wait maxevents=111669673984 
+157 19:47:25.425059821 3 systemd-journal (376) < epoll_wait res=4295491584 
+158 19:47:25.425060343 3 systemd-journal (376) > exit 
+159 19:47:25.425060673 3 systemd-journal (376) < <unknown> 
+160 19:47:25.425061330 3 systemd-journal (376) > read fd=38654967816 size=589828 
+161 19:47:25.425062434 3 systemd-journal (376) < read res=442386874376 data= 
+162 19:47:25.425066244 2 rs:main (877) > write fd=25770065928 size=393220 
+163 19:47:25.425071571 3 systemd-journal (376) > epoll_wait maxevents=111669673984 
+164 19:47:25.425072008 3 systemd-journal (376) < epoll_wait res=4295491584 
+165 19:47:25.425072547 3 systemd-journal (376) > exit 
+166 19:47:25.425072734 3 systemd-journal (376) < <unknown> 
+167 19:47:25.425073133 3 systemd-journal (376) > read fd=38654967816 size=589828 
+168 19:47:25.425073763 3 systemd-journal (376) < read res=442386874376 data= 
+169 19:47:25.425081584 3 systemd-journal (376) > epoll_wait maxevents=111669673984 
+170 19:47:25.425082069 3 systemd-journal (376) < epoll_wait res=4295491584 
+171 19:47:25.425082513 3 systemd-journal (376) > exit 
+172 19:47:25.425082773 3 systemd-journal (376) < <unknown> 
+173 19:47:25.425083180 3 systemd-journal (376) > read fd=38654967816 size=589828 
+174 19:47:25.425083787 3 systemd-journal (376) < read res=442386874376 data= 
+175 19:47:25.425084344 2 rs:main (877) < write res=2199028498440 data= 
+176 19:47:25.425087226 2 rs:main (877) > write fd=30065033224 size=458756 
+177 19:47:25.425091820 3 systemd-journal (376) > epoll_wait maxevents=111669673984 
+178 19:47:25.425092565 1 <NA> (13) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+179 19:47:25.425094885 3 systemd-journal (376) > switch next=30065033220 pgft_maj=1970324836974592 pgft_min=1970324836974592 vm_size=0 vm_rss=1 vm_swap=684982272 
+180 19:47:25.425106922 3 <NA> (7) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+181 19:47:25.425110525 2 rs:main (877) < write res=2199028498440 data= 
+182 19:47:25.425115155 2 rs:main (877) > futex addr=183BC8C00080002 op=0(FUTEX_WAIT) val=6505139200 
+183 19:47:25.425117715 2 rs:main (877) > switch next=3801046319108 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=226754563 
+184 19:47:25.425122025 2 gmain (885) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=374079492 
+185 19:47:25.425788390 0 <NA> (0) > switch next=126783139872772 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+186 19:47:25.425791679 0 lua-language-se (29519) < select res=524288 
+187 19:47:25.425794165 2 <NA> (0) > switch next=11875584835588 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+188 19:47:25.425794817 0 lua-language-se (29519) > select 
+189 19:47:25.425796864 0 lua-language-se (29519) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=1400897542 
+190 19:47:25.425797739 2 lua-language-se (2765) < select res=524288 
+191 19:47:25.425800694 2 lua-language-se (2765) > select 
+192 19:47:25.425802848 2 lua-language-se (2765) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=1279787014 
+193 19:47:25.427101072 1 <NA> (0) > switch next=3659312398340 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+194 19:47:25.427103464 1 wrapper (852) < nanosleep res=524288 
+195 19:47:25.427107560 1 wrapper (852) > nanosleep interval=429496729600524288(4.29497e+08s) 
+196 19:47:25.427109939 1 wrapper (852) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=161742848 
+197 19:47:25.428474223 0 <NA> (0) > switch next=91216515694596 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+198 19:47:25.428476423 0 hostguard (21238) < nanosleep res=524288 
+199 19:47:25.428494807 0 hostguard (21238) > read fd=21475098632 size=327684 
+200 19:47:25.428497743 0 hostguard (21238) < read res=-47244640248 data= 
+201 19:47:25.428500819 0 hostguard (21238) > nanosleep interval=2147483648000524288(2.14748e+09s) 
+202 19:47:25.428503225 0 hostguard (21238) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=947126291 
+203 19:47:25.428982575 3 <NA> (0) > switch next=30065033220 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+204 19:47:25.428986181 3 <NA> (7) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+205 19:47:25.432980319 3 <NA> (0) > switch next=30065033220 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+206 19:47:25.432982617 3 <NA> (7) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+207 19:47:25.436977380 3 <NA> (0) > switch next=30065033220 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+208 19:47:25.436979093 3 <NA> (7) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+209 19:47:25.437810495 3 <NA> (0) > switch next=20955145699332 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+210 19:47:25.437812997 3 cpptools (4879) < futex res=-472445878272 
+211 19:47:25.437818021 3 cpptools (4879) > futex addr=B426030800080002 op=0(FUTEX_WAIT) val=36027371727554560 
+212 19:47:25.437819373 3 cpptools (4879) < futex res=524288 
+213 19:47:25.437825810 3 cpptools (4879) > futex addr=B426033400080002 op=0(FUTEX_WAIT) val=36027371727565824 
+214 19:47:25.437828115 3 cpptools (4879) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=3707502616 
+215 19:47:25.443075276 0 <NA> (0) > switch next=20323785506820 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+216 19:47:25.443080570 0 sshd (4732) < select res=4295491584 
+217 19:47:25.443083506 0 sshd (4732) > exit 
+218 19:47:25.443085304 0 sshd (4732) < <unknown> 
+219 19:47:25.443085729 0 sshd (4732) > exit 
+220 19:47:25.443085998 0 sshd (4732) < <unknown> 
+221 19:47:25.443087673 0 sshd (4732) > exit 
+222 19:47:25.443088298 0 sshd (4732) < <unknown> 
+223 19:47:25.443090026 0 sshd (4732) > read fd=12885164040 size=196612 
+224 19:47:25.443094135 0 sshd (4732) < read res=360782495752 data= 
+225 19:47:25.443111545 0 sshd (4732) > exit 
+226 19:47:25.443111785 0 sshd (4732) < <unknown> 
+227 19:47:25.443112878 0 sshd (4732) > select 
+228 19:47:25.443114437 0 sshd (4732) < select res=4295491584 
+229 19:47:25.443114938 0 sshd (4732) > exit 
+230 19:47:25.443115157 0 sshd (4732) < <unknown> 
+231 19:47:25.443115553 0 sshd (4732) > exit 
+232 19:47:25.443115732 0 sshd (4732) < <unknown> 
+233 19:47:25.443116161 0 sshd (4732) > exit 
+234 19:47:25.443116337 0 sshd (4732) < <unknown> 
+235 19:47:25.443117000 0 sshd (4732) > write fd=34360000520 size=524292 
+236 19:47:25.443138088 0 sshd (4732) < write res=210456608776 data= 
+237 19:47:25.443139403 0 sshd (4732) > exit 
+238 19:47:25.443139615 0 sshd (4732) < <unknown> 
+239 19:47:25.443140284 0 sshd (4732) > select 
+240 19:47:25.443144211 0 sshd (4732) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=666370049 
+241 19:47:25.443148825 2 <NA> (0) > switch next=20736102367236 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+242 19:47:25.443153646 2 node (4828) < epoll_wait res=4295491584 
+243 19:47:25.443172276 2 node (4828) > read fd=81604640776 size=1245188 
+244 19:47:25.443176491 2 node (4828) < read res=210456608776 data= 
+245 19:47:25.443239876 2 node (4828) > futex addr=446C76400080002 op=0(FUTEX_WAIT) val=18367341568 
+246 19:47:25.443248824 2 node (4828) < futex res=4295491584 
+247 19:47:25.443254664 0 <NA> (0) > switch next=20783347007492 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+248 19:47:25.443256372 0 node (4839) < futex res=524288 
+249 19:47:25.443259407 0 node (4839) > futex addr=446C72000080002 op=0(FUTEX_WAIT) val=18367324160 
+250 19:47:25.443260324 0 node (4839) < futex res=524288 
+251 19:47:25.443266478 0 node (4839) > write fd=73014706184 size=1114116 
+252 19:47:25.443268294 0 node (4839) < write res=34360262664 data= 
+253 19:47:25.443268927 0 node (4839) > futex addr=446C76400080002 op=0(FUTEX_WAIT) val=18367341568 
+254 19:47:25.443270961 0 node (4839) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=1290534928 
+255 19:47:25.443307158 2 node (4828) > epoll_wait maxevents=4398047035392 
+256 19:47:25.443308851 2 node (4828) < epoll_wait res=4295491584 
+257 19:47:25.443309573 2 node (4828) > read fd=73014706184 size=1114116 
+258 19:47:25.443310658 2 node (4828) < read res=34360262664 data= 
+259 19:47:25.443329363 2 node (4828) > futex addr=446C76400080002 op=0(FUTEX_WAIT) val=18367341568 
+260 19:47:25.443340136 2 node (4828) < futex res=4295491584 
+261 19:47:25.443340953 0 <NA> (0) > switch next=20796231909380 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+262 19:47:25.443342039 0 node (4842) < futex res=524288 
+263 19:47:25.443343515 0 node (4842) > futex addr=446C72000080002 op=0(FUTEX_WAIT) val=18367324160 
+264 19:47:25.443343788 0 node (4842) < futex res=524288 
+265 19:47:25.443344858 0 node (4842) > write fd=73014706184 size=1114116 
+266 19:47:25.443345598 0 node (4842) < write res=34360262664 data= 
+267 19:47:25.443346118 0 node (4842) > futex addr=446C76400080002 op=0(FUTEX_WAIT) val=18367341568 
+268 19:47:25.443347628 0 node (4842) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=1290534928 
+269 19:47:25.443351078 2 node (4828) > epoll_wait maxevents=4398047035392 
+270 19:47:25.443351671 2 node (4828) < epoll_wait res=4295491584 
+271 19:47:25.443352206 2 node (4828) > read fd=73014706184 size=1114116 
+272 19:47:25.443352726 2 node (4828) < read res=34360262664 data= 
+273 19:47:25.443357523 2 node (4828) > futex addr=446C76400080002 op=0(FUTEX_WAIT) val=18367341568 
+274 19:47:25.443363147 2 node (4828) < futex res=4295491584 
+275 19:47:25.443365490 2 node (4828) > epoll_wait maxevents=4398047035392 
+276 19:47:25.443365882 2 node (4828) < epoll_wait res=524288 
+277 19:47:25.443366575 2 node (4828) > epoll_wait maxevents=4398047035392 
+278 19:47:25.443369288 2 node (4828) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=69 vm_swap=1290534928 
+279 19:47:25.443372541 1 <NA> (0) > switch next=20791936942084 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+280 19:47:25.443375770 1 node (4841) < futex res=524288 
+281 19:47:25.443378186 1 node (4841) > futex addr=446C72000080002 op=0(FUTEX_WAIT) val=18367324160 
+282 19:47:25.443379058 1 node (4841) < futex res=524288 
+283 19:47:25.443381870 1 node (4841) > write fd=73014706184 size=1114116 
+284 19:47:25.443390169 1 node (4841) < write res=34360262664 data= 
+285 19:47:25.443391254 1 node (4841) > futex addr=446C76400080002 op=0(FUTEX_WAIT) val=18367341568 
+286 19:47:25.443394165 1 node (4841) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=1290534928 
+287 19:47:25.443396726 2 <NA> (0) > switch next=20736102367236 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+288 19:47:25.443398119 2 node (4828) < epoll_wait res=4295491584 
+289 19:47:25.443398916 2 node (4828) > read fd=73014706184 size=1114116 
+290 19:47:25.443399453 2 node (4828) < read res=34360262664 data= 
+291 19:47:25.443479555 2 node (4828) > write fd=73014706184 size=1114116 
+292 19:47:25.443480573 2 node (4828) < write res=34360262664 data= 
+293 19:47:25.444019975 2 node (4828) > write fd=133144248328 size=2031620 
+294 19:47:25.444037887 2 node (4828) < write res=98785755144 data= 
+295 19:47:25.444043623 0 <NA> (0) > switch next=20920785960964 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+296 19:47:25.444048649 0 cpptools (4871) < read res=98785755144 data= 
+297 19:47:25.444057879 2 node (4828) > write fd=133144248328 size=2031620 
+298 19:47:25.444059209 2 node (4828) < write res=459566743560 data= 
+299 19:47:25.444060552 0 cpptools (4871) > read fd=262152 size=4 
+300 19:47:25.444063112 0 cpptools (4871) < read res=459566743560 data= 
+301 19:47:25.444075234 0 cpptools (4871) > futex addr=B426033400080002 op=0(FUTEX_WAIT) val=36027371727565824 
+302 19:47:25.444082981 0 cpptools (4871) < futex res=4295491584 
+303 19:47:25.444084018 0 cpptools (4871) > read fd=262152 size=4 
+304 19:47:25.444085928 0 cpptools (4871) > switch next=262148 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=3707502616 
+305 19:47:25.444103278 3 <NA> (0) > switch next=20955145699332 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+306 19:47:25.444105123 3 cpptools (4879) < futex res=524288 
+307 19:47:25.444108449 3 cpptools (4879) > futex addr=B426030800080002 op=0(FUTEX_WAIT) val=36027371727554560 
+308 19:47:25.444109036 3 cpptools (4879) < futex res=524288 
+309 19:47:25.444164433 3 cpptools (4879) > stat 
+310 19:47:25.444171670 3 cpptools (4879) < stat res=2097160 path=2097160 
+311 19:47:25.444194478 3 cpptools (4879) > fcntl fd=64424574984 cmd=0(UNKNOWN) 
+312 19:47:25.444198800 3 cpptools (4879) < fcntl res=524288 
+313 19:47:25.444428662 3 cpptools (4879) > lseek fd=60129607688 offset=3584 whence=0(SEEK_SET) 
+314 19:47:25.444431122 3 cpptools (4879) < lseek res=7449947192950784 
+315 19:47:25.444431921 3 cpptools (4879) > read fd=60129804296 size=917508 
+316 19:47:25.444435872 3 cpptools (4879) < read res=17592191287304 data= 
+317 19:47:25.444437775 3 cpptools (4879) > fcntl fd=64424574984 cmd=0(UNKNOWN) 
+318 19:47:25.444439496 3 cpptools (4879) < fcntl res=524288 
+319 19:47:25.444505521 2 node (4828) > futex addr=5F549CC00080002 op=0(FUTEX_WAIT) val=25590090752 
+320 19:47:25.444508026 3 cpptools (4879) > lseek fd=55834640392 offset=3328 whence=0(SEEK_SET) 
+321 19:47:25.444508913 3 cpptools (4879) < lseek res=334251535368192 
+322 19:47:25.444509316 3 cpptools (4879) > read fd=55834837000 size=851972 
+323 19:47:25.444511724 3 cpptools (4879) < read res=17592191287304 data= 
+324 19:47:25.444513507 3 cpptools (4879) > lseek fd=60129607688 offset=3584 whence=0(SEEK_SET) 
+325 19:47:25.444513786 3 cpptools (4879) < lseek res=10741266531221504 
+326 19:47:25.444514110 3 cpptools (4879) > read fd=60129804296 size=917508 
+327 19:47:25.444516219 3 cpptools (4879) < read res=17592191287304 data= 
+328 19:47:25.444516554 2 node (4828) < futex res=4295491584 
+329 19:47:25.444517654 2 node (4828) > futex addr=5F549CC00080002 op=0(FUTEX_WAIT) val=25590090752 
+330 19:47:25.444521044 2 node (4828) < futex res=4295491584 
+331 19:47:25.444521880 2 node (4828) > futex addr=5F549CC00080002 op=0(FUTEX_WAIT) val=25590090752 
+332 19:47:25.444521905 0 <NA> (0) > switch next=20757577203716 pgft_maj=0 pgft_min=0 vm_size=0 vm_rss=0 vm_swap=0 
+333 19:47:25.444523498 0 node (4833) < futex res=524288 
+334 19:47:25.444524045 3 cpptools (4879) > fcntl fd=64424574984 cmd=0(UNKNOWN) 
+335 19:47:25.444524647 0 node (4833) > futex addr=5F549A000080002 op=0(FUTEX_WAIT) val=25590079488 
+336 19:47:25.444525066 3 cpptools (4879) < fcntl res=524288 
