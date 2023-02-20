@@ -112,12 +112,12 @@ nod_dev_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
     case NOD_IOCTL_CLEAR_BUFFER:
         nod_proc_traverse(__proc_buf_reset);
 
-        pr_info("proc: clean buffer");
+        // pr_info("proc: clean buffer");
         break;
 
     // AFL-SYS new ioctl function
     case NOD_IOCTL_CLEAR_GLOBAL_BUFFER:
-        pr_info("proc: clean global buffer");
+        // pr_info("proc: clean global buffer");
 
         global_buffer.info->nevents = 0;
         global_buffer.info->tail = 0;
@@ -127,7 +127,7 @@ nod_dev_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
 
     // AFL-SYS new ioctl function
     case NOD_IOCTL_READ_GLOBAL_BUFFER_COUNT_INFO:
-        pr_info("proc: get global buffer count");
+        // pr_info("proc: get global buffer count");
 
         memset(&cinfo, 0, sizeof(cinfo));
         cinfo.event_count = global_buffer.info->nevents;
@@ -142,7 +142,7 @@ nod_dev_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
 
     // AFL-SYS new ioctl function
     case NOD_IOCTL_FETCH_GLOBAL_BUFFER:
-        pr_info("proc: fetch global buffer");
+        // pr_info("proc: fetch global buffer");
 
         if (nod_copy_from_user((void *)&fetch, (void *)arg, sizeof(fetch))) {
             ret = -EFAULT;
@@ -167,7 +167,7 @@ nod_dev_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
         break;
         
     case NOD_IOCTL_FETCH_BUFFER:
-        pr_info("proc: fetch buffer");
+        // pr_info("proc: fetch buffer");
 
         if (nod_copy_from_user((void *)&fetch, (void *)arg, sizeof(fetch))) {
             ret = -EFAULT;
@@ -191,7 +191,7 @@ nod_dev_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
         break;
     
     case NOD_IOCTL_READ_BUFFER_COUNT_INFO:
-        pr_info("proc: count buffer");
+        // pr_info("proc: count buffer");
 
         memset(&cinfo, 0, sizeof(cinfo));
         nod_proc_traverse(__proc_bufcount_read, &cinfo);
@@ -204,12 +204,12 @@ nod_dev_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
     case NOD_IOCTL_STOP_RECORDING:
         untrace_syscall();
 
-        pr_info("proc: Stop recording");
+        // pr_info("proc: Stop recording");
         break;
     case NOD_IOCTL_START_RECORDING:
         trace_syscall();
 
-        pr_info("proc: Start recording");
+        // pr_info("proc: Start recording");
         break;
 
     case NOD_IOCTL_RESTORE_SECURITY:

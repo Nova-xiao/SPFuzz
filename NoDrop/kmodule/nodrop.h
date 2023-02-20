@@ -24,8 +24,8 @@ extern loff_t wpos;
 extern struct nod_kbuffer global_buffer;
 // AFL-SYS add max events to record
 #define MAX_NEVENTS 1000
-// #define NOD_TEST(task) if (!(STR_EQU((task)->comm, "python3") || STR_EQU((task)->comm, "toTest")))
-#define NOD_TEST(task) if (!STR_EQU((task)->comm, "toTest"))
+#define NOD_TEST(task) if (!(STR_EQU((task)->comm, "wine") || STR_EQU((task)->comm, "toTest")))
+// #define NOD_TEST(task) if (!STR_EQU((task)->comm, "toTest"))
 // #define NOD_TEST(task) if (!(STR_EQU((task)->comm, "nginx") || STR_EQU((task)->comm, "httpd") || STR_EQU((task)->comm, "redis-server") || STR_EQU((task)->comm, "postmark") || STR_EQU((task)->comm, "openssl") || STR_EQU((task)->comm, "7z")))
 #define STR_EQU(s1, s2) (strcmp(s1, s2) == 0)
 #define ASSERT(expr) BUG_ON(!(expr))
@@ -64,6 +64,9 @@ void trace_register_destory(void);
 // proc.c
 int  proc_init(void);
 void proc_destroy(void);
+	// AFL-SYS modify
+int  glb_buf_init(void);
+void glb_buf_destroy(void);
 
 // privil.c
 unsigned int nod_get_seccomp(void);

@@ -977,10 +977,10 @@ static int val_to_ring(struct event_filler_arguments *args, uint64_t val, u32 va
     args->arg_data_offset += len; \
     args->arg_data_size -= len;
 
-	if((u32)args->event_type == 146 && param_info->type == 45){
-		pr_info("MPROTECT: event type %u, param type: %d, cuargs:%u", 
-		(u32)args->event_type, param_info->type, args->curarg);
-	}
+	// if((u32)args->event_type == 146 && param_info->type == 45){
+	// 	pr_info("MPROTECT: event type %u, param type: %d, cuargs:%u", 
+	// 	(u32)args->event_type, param_info->type, args->curarg);
+	// }
 
     return NOD_SUCCESS;
 }
@@ -1768,13 +1768,13 @@ int f_proc_startupdate(struct event_filler_arguments *args)
 
 			if (unlikely(!mm)) {
 				args->str_storage[0] = 0;
-				pr_info("f_proc_startupdate drop, mm=NULL\n");
+				// pr_info("f_proc_startupdate drop, mm=NULL\n");
 				return NOD_FAILURE_BUG;
 			}
 
 			if (unlikely(!mm->arg_end)) {
 				args->str_storage[0] = 0;
-				pr_info("f_proc_startupdate drop, mm->arg_end=NULL\n");
+				// pr_info("f_proc_startupdate drop, mm->arg_end=NULL\n");
 				return NOD_FAILURE_BUG;
 			}
 

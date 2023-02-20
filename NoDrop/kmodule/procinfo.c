@@ -291,6 +291,17 @@ out:
 int
 procinfo_init(void)
 {
+    // AFL-SYS init global buffer
+    // struct timespec tp1;
+    // getnstimeofday(&tp1);
+    
+    memset(&global_buffer, 0, sizeof(&global_buffer));
+
+    // struct timespec tp2;
+    // getnstimeofday(&tp2);
+    // vpr_warn("memset() time overhead: %d s, %ld ns.", tp2.tv_sec-tp1.tv_sec, tp2.tv_nsec-tp1.tv_nsec);
+
+
     int retval;
 
     proc_info_cachep = kmem_cache_create("nod_proc_info_cache", sizeof(struct nod_proc_info), 0, 0, NULL);
@@ -305,12 +316,6 @@ procinfo_init(void)
 
     retval = 0;
 
-    // AFL-SYS init global buffer
-    if(init_buffer(&global_buffer)) {
-        vpr_err("allocate global kernel buffer failed\n");
-        retval = -ENOMEM;
-    }
-    
 out:
     return retval;
 }
@@ -320,9 +325,6 @@ procinfo_destroy(void)
 {
     struct list_head *pos, *npos;
     struct nod_proc_info *this;
-
-    // AFL-SYS global buffer freed
-    free_buffer(&global_buffer);
 
     if(proc_info_cachep) {
         down_write(&proc_info_rt.sem);
@@ -340,3 +342,22 @@ procinfo_destroy(void)
         kmem_cache_destroy(proc_info_cachep);
     }
 }
+
+int
+glb_buf_init(void)
+{
+    int retval = 0;
+    if(init_buffer(&global_buffer)) {
+        vpr_err("allocate global kernel buffer failed\n");
+        retval = -ENOMEM;
+    }
+
+    return retval;
+}
+
+void
+glb_buf_destroy(void)
+{
+    free_buffer(&global_buffer);
+}
+

@@ -12,58 +12,6 @@
 struct file* dump_file = NULL;
 loff_t wpos = 0;
 
-// // AFL-SYS helper function for dump_buf_to_file
-// static int parse_buffer
-// (struct nod_event_hdr *hdr, char *buffer, void *__data)
-// {
-//     size_t i;
-//     const struct nod_event_info *info;
-//     const struct nod_param_info *param;
-//     uint16_t *args;
-//     char *data;
-//     char buf[150];
-
-//     if (hdr->type < 0 || hdr->type >= NODE_EVENT_MAX)
-//         return -1;
-
-//     info = &g_event_info[hdr->type];
-//     args = (uint16_t *)buffer;
-//     data = (char *)(args + info->nparams);
-
-//     int bufsize = sprintf(buf, "%s\n", info->name);
-//     ssize_t size = kernel_write(dump_file, buf, bufsize, &wpos);
-//     if(size <= 0){
-//         printk("kernel_write fail, ret:%d, buf:%s\n", bufsize, buf);
-//         return NOD_FAILURE_BUG;
-//     }
-    
-//     // fprintf(dump_file, "%lu %u (%u): %s(", hdr->ts, hdr->tid, hdr->cpuid, info->name);
-//     // fprintf(dump_file, ")\n");
-
-//     return 0;
-// }
-
-// // AFL-SYS dump the kernel buffer directly into a file
-// static int
-// dump_buf_to_file(struct nod_proc_info *p)
-// {
-//     char *ptr, *buffer_end;
-//     struct nod_event_hdr *hdr;
-
-//     // kernel-mode p->buffer->buffer and the user-mode p->ubuffer->buffer is the same
-//     ptr = p->buffer.buffer;
-//     buffer_end = ptr + p->buffer.info->tail;
-//     while (ptr < buffer_end) {
-//         hdr = (struct nod_event_hdr *)ptr;
-//         parse_buffer(hdr, (char *)(hdr + 1), 0);
-//         // fwrite(ptr, hdr->len, 1, file);
-
-//         ptr += hdr->len;
-//     }
-
-//     return NOD_SUCCESS;
-// }
-
 static int 
 do_record_one_event(struct nod_proc_info *p,
         enum nod_event_type event_type,
@@ -71,6 +19,9 @@ do_record_one_event(struct nod_proc_info *p,
         struct nod_event_data *event_datap)
 {
     int cbret, restart, force;
+    // AFL-SYS debug
+    int reset_count = 0;
+
     size_t event_size;
     uint32_t freespace; 
     struct event_filler_arguments args;
@@ -106,6 +57,10 @@ start:
         force = 0;
 
         restart = 1;
+
+        // AFL-SYS debug
+        // vpr_info("freespace: %d, arg_data_offset: %d", freespace, args.arg_data_offset);
+
         goto loading;
     }
 
@@ -157,6 +112,10 @@ start:
         force = 0;
 
         restart = 1;
+
+        // AFL-SYS debug
+        // vpr_info("cbret: %d", cbret);
+
         goto loading;
     } else {
         goto out;
@@ -178,9 +137,19 @@ loading:
 
     // force it not to reset buffer and not to load monitor...
     if(restart){
-        vpr_info("reset buffer..\n");
+        // AFL-SYS debug (prevent dead loop...)
+        if (reset_count >= 0){
+            reset_buffer(buffer, NOD_INIT_INFO);
+            goto out_ret;
+        }
+        
+        // vpr_info("reset buffer..\n");
         // the buffer is full, we just reset the buffer.
         reset_buffer(buffer, NOD_INIT_INFO);
+
+        // AFL-SYS debug (prevent dead loop...)
+        reset_count = 1;
+
         goto start;
     }
     else{

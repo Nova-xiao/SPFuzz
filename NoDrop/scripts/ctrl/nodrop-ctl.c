@@ -26,7 +26,7 @@ static int _parse(FILE *out, struct nod_event_hdr *hdr, char *buffer, void *__da
     
     // formatting
     // fprintf(out, "%lu %u (%u): %s(", hdr->ts, hdr->tid, hdr->cpuid, info->name);
-    fprintf(out, "%s", info->name);
+    fprintf(out, "%s ", info->name);
 
     // add param info
     for (i = 0; i < info->nparams; ++i) {

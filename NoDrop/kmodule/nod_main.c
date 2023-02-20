@@ -29,6 +29,12 @@ static int nodrop_init(void)
         goto out_proc;
     }
 
+    // AFL-SYS add global buffer initialization
+    if ((err = glb_buf_init())) {
+        pr_err("create proc failed (%d)\n", err);
+        goto out_proc;
+    }
+
     err = 0;
 out:
     return err;
@@ -50,6 +56,9 @@ static void nodrop_exit(void)
     tracepoint_destory();
     procinfo_destroy();
     loader_destory();
+    // AFL-SYS global buffer destroy
+    glb_buf_destroy();
+
     pr_info("NoDrop: Uninstalled\n");
 }
 
