@@ -1,7 +1,7 @@
-# AFL-SYS
+# PASSFuzz
 
 ## Installation
-* AFL-SYS depends on a kernel module named NoDrop. 
+* PASSFuzz depends on a kernel module named NoDrop. 
 First, run NoDrop/scripts/getmusl.sh to get musl.
 Then enter NoDrop/build and use cmake to install:
 ```
@@ -12,7 +12,7 @@ make load
 If you need some debugging information, turn on debug mode with: 
 ```
 make debug=1
-``` 
+```
 and logs will reside in afl-sys-demo/logs/logging.
 
 ## Usage
