@@ -8,12 +8,12 @@ Then enter NoDrop/build and use cmake to install:
 cmake ..
 make load
 ```
-* Use make to compile afl-sys-demo. 
+* Use make to compile the fuzzer. 
 If you need some debugging information, turn on debug mode with: 
 ```
 make debug=1
 ```
-and logs will reside in afl-sys-demo/logs/logging.
+and logs will reside in PASSFuzz/logs/logging.
 
 ## Usage
 * The usage of PASSFuzz is mostly the same as AFL, some other options of PASSFuzz will later be explained.
