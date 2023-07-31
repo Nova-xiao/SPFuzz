@@ -16,6 +16,6 @@ make debug=1
 and logs will reside in afl-sys-demo/logs/logging.
 
 ## Usage
-* The usage of AFL-SYS is exactly the same with AFL, some other options of AFL-SYS will later be explained.
-* Note that the paths on AFL-SYS' panel refers to the number of syscall n-grams, not traditional paths.
+* The usage of PASSFuzz is mostly the same as AFL, some other options of PASSFuzz will later be explained.
+* Note that the paths on PASSFuzz' panel refer to the number of syscall paths, not traditional paths.
 
