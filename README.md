@@ -19,3 +19,15 @@ and logs will reside in SPFuzz/logs/logging.
 * The usage of SPFuzz is mostly the same as AFL, some other options of SPFuzz will later be explained.
 * Note that the paths on SPFuzz' panel refer to the number of syscall paths, not traditional paths.
 
+
+
+## Coverage Line Data 
+
+* You can find the missing figures under *images* folder
+
+
+
+## Benchmark Description
+
+![descriptions](descriptions.png)
+
