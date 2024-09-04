@@ -21,10 +21,6 @@ and logs will reside in SPFuzz/logs/logging.
 
 
 
-## Coverage Line Data 
-
-* You can find the missing figures under *images* folder
-
 
 
 ## Benchmark Description
