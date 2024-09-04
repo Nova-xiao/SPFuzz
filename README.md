@@ -22,8 +22,3 @@ and logs will reside in SPFuzz/logs/logging.
 
 
 
-
-## Benchmark Description
-
-![descriptions](descriptions.png)
-
