@@ -1,0 +1,8 @@
+Set up shared memory.
+Forkserver starts with pid 13548.
+afl_states_stop
+
+killing child_pid 13744 with signal 9
+
+killing fsrv_pid 13548 with signal 9
+
